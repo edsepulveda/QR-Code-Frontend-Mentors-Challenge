@@ -73,7 +73,7 @@ body{
   font-size: 0.9375rem;
   color: var(--color-darkblue-900);
   background-color: var(--color-secondary-200);
-
+  min-height: 100vh;
   display: grid;
   place-content: center;
   margin: 1rem;
@@ -100,11 +100,15 @@ body{
 }
 
 .qr-code__img{
-  padding: var(--content-padding);
+  padding: 1.2rem;
+}
+
+.qr-code picture img{
+  border-radius: 0.7rem;
 }
 
 .qr-code__content{
-  padding: var(--content-padding-content);
+  padding: 0.5rem 2.5rem;
   display: grid;
   gap: var(--content-spacing);
   text-align: center;
@@ -112,11 +116,15 @@ body{
 
 .qr-code__subtitle{
   color: var(--color-blueish-400);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 
 @media screen and (min-width: 600px) {
+
+  body{
+    overflow: hidden;
+  }
   .qr-code{
     max-width: 375px;
   }
